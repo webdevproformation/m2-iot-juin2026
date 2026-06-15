@@ -39,4 +39,15 @@ python -m venv .env
 .env\Scripts\activate.bat
 # Linux Mac
 source env/Scripts/activate
+
+# (.env) C:\Users\harri\Desktop\iot>
+
+pip install numpy seaborn matplotlib scipy pandas
+```
+---
+
+# créer un premier fichier Jupyter
+
+```sh
+03-numpy.ipynb
 ```
