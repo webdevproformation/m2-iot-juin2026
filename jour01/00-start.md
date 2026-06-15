@@ -42,5 +42,5 @@
 - Alyssa
 - Emilien
 - Randy
-- Tarik (absent ce matin)
+- Tarik
 
