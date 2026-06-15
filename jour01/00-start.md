@@ -16,7 +16,7 @@
 
 ---
 
-# Groupe 1 => Sujet 3
+# Groupe 1 => Sujet 3 =>  Projet Intégré RFID, ESP32 et Machine Learning
 
 (sous groupe)
 
@@ -28,17 +28,19 @@
 - Youcef
 - Jason
 
-# Groupe 2 => Sujet 2
+# Groupe 2 => Sujet 2 => IoT Système d’irrigation intelligente
 
 - Said 
+- Fred
+- Anthony
 
 
-# Groupe 3 => Sujet 1
+# Groupe 3 => Sujet 1 => IoT Système de capteur de circulation routière
 
 (1 projet pour les 4)
 
 - Alyssa
 - Emilien
 - Randy
-- Tarik
+- Tarik (absent ce matin)
 
