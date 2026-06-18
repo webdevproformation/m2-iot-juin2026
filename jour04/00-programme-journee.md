@@ -8,6 +8,7 @@
     - seanborn 
 
     - scikit learn ( ML )
+    - pyporch (deep learning) => dernière semaine ensemble + présentation du projet en classe
 
 - finir matin pandas la librairie (les élements clés) + seaborn 
 
