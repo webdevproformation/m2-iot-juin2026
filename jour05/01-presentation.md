@@ -98,4 +98,4 @@ model.score(X,y)
 y_predict = model.predict(notre_X)
 ```
 
-- 
+# scikit learn en action
