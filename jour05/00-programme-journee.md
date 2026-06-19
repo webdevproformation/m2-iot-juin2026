@@ -23,3 +23,5 @@ y_predict = model.predict( X_nos_donnée )
 # Après midi
 
 - projet suite et fin pour cette semaine (travail de groupe)
+
+=> rdv 9h20 pour le cours @ toute suite MERCI 
