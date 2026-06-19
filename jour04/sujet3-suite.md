@@ -76,3 +76,6 @@ Modèle à utiliser :
 Hidden Markov Models (HMM)
 LSTM séquentiel
 graph-based anomaly detection
+
+
+Bon café rdv dans 15 min @ toute suite !! rdv 14h45 
