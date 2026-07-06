@@ -107,3 +107,24 @@ Ce tenseur doit contenir exactement :
 - Crée ensuite un tenseur mask avec torch.zeros_like() ayant la même forme que ton tenseur.
 - Dans mask, remplace les positions correspondant aux 1 du tenseur original par la valeur 9.
 ```
+
+```py
+data = torch.cat([
+    torch.zeros(10),
+    torch.ones(30)
+]);
+data
+
+# effectuer le mélange 
+data = data[torch.randperm(data.size(0))]
+data
+
+data = data.reshape((4,2,5))
+data
+# créer un masque qui ne contient que des er
+data_masque = torch.zeros_like(data)
+
+data_masque[data == 1] = 9
+
+data_masque
+```
