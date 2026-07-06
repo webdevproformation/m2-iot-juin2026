@@ -1,0 +1,61 @@
+# element de base pour créer des réseaux de neuronne artificiel 
+
+- Tensor 
+- un peu comme sur NumPy voir les fondamentaux de Tensor / les opérations de base que l'on  peut utiliser
+
+- résoudre des problèmes de régression 
+- résoudre des problèmes de classication 
+    - classification binaire (survecu oui / non)
+    - classification multi class (fleur iris => 4 types de fleurs)
+
+- CNN Convolutional Neural Network => les réseaux de neuronne dédiés à la comprehension / détection d'image 
+
+---
+
+# Tensor 
+
+- données (excel / photos / texte / image) 
+- transformer en Tensor 
+- rappeler les tableaux NDArray (N Dimension Array) de NumPy 
+
+
+```py
+# comme pour NumPy
+
+import torch
+
+scalaire = torch.tensor(5)
+
+scalaire.ndim # 0
+scalaire.shape # torch.Size([]) liste vide
+scalaire.item() # permettre de récupérer la valeur stockée => tensor => repasser sur une valeur classique
+
+vecteur = torch.tensor([1,2]) 
+# utilise BEAUCOUP lorsque l'on va utiliser nn.Linear()
+# ndim 1
+vecteur.shape  # torch.Size([2]) # target 
+
+# MATRICE 
+MATRICE = torch.tensor([ [1,2,3], [3,4, 5] ])
+MATRICE.shape  # torch.Size([2 , 3])
+
+# 2 => nombre de ligne / exemple dans ton dataset
+# 3 => colonnes / caractéristiques / Features du dataset
+
+# TENSOR tableau à 3 dimensions
+
+TENSOR = torch.tensor([ [  [1,2] , [3,4] ] ])
+
+# forme du tensor
+TENSOR.shape  # torch.Size([1, 2 , 2])
+```
+
+
+```txt
+EXO 
+
+créer un tensor de dimension 3 de taille (1,2,4) contenant des chiffres entiers de votre choix
+
+- afficher ses dimensions
+- afficher son contenu
+```
