@@ -123,3 +123,21 @@ Contraintes
 - Utiliser torch.ones_like()
 - Utiliser torch.vstack()
 - Utiliser view() pour que la ligne de 1 ait la bonne forme
+
+
+```py
+import numpy as np
+import torch
+
+data = np.array([
+    [2, 4, 6],
+    [8, 10, 12]
+])
+
+tensor_data = torch.from_numpy(data)
+
+ligne_un = torch.ones_like(tensor_data[0] ).view(1,3)
+
+resultat_final = torch.vstack( (tensor_data , ligne_un  )  )
+resultat_final
+```
