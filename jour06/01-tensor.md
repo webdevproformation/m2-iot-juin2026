@@ -87,3 +87,23 @@ resultat = resultat.reshape((2,5,10))
 
 resultat
 ```
+
+
+## Exo
+
+```txt
+Énoncé
+À l'aide de PyTorch :
+
+Crée un tenseur 3D de forme (4, 2, 5).
+Ce tenseur doit contenir exactement :
+
+10 zéros ;
+30 uns.
+
+
+- Mélange les valeurs aléatoirement.
+- Transforme le vecteur obtenu en tenseur 3D.
+- Crée ensuite un tenseur mask avec torch.zeros_like() ayant la même forme que ton tenseur.
+- Dans mask, remplace les positions correspondant aux 1 du tenseur original par la valeur 9.
+```
