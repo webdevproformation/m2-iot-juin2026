@@ -74,3 +74,52 @@ resultat = torch.vstack( ( haut , ligne_3_un , ligne_4_zero ) )
 
 resultat
 ```
+
+## Correction
+
+```py
+# créer les block de base
+import torch
+A = torch.ones((2,2))
+B = torch.zeros((2,2))
+
+ligne_1 = torch.hstack( (A,B,A) )
+
+ligne_2 = torch.hstack( (B,A,B) )
+
+derniere_ligne = torch.ones_like(torch.zeros(6)).view(1,6)
+
+# résultat final 
+resultat = torch.vstack( (ligne_1 ,  ligne_2 , derniere_ligne) )
+resultat
+```
+
+# Enoncé
+
+Exercice : 
+
+On te donne le tableau NumPy suivant :
+
+```py
+import numpy as np
+
+data = np.array([
+    [2, 4, 6],
+    [8, 10, 12]
+])
+```
+Objectif
+Obtenir le tenseur PyTorch suivant :
+
+```py
+tensor([[ 2,  4,  6],
+        [ 8, 10, 12],
+        [ 1,  1,  1]])
+```
+
+Contraintes
+
+- Utiliser torch.from_numpy()
+- Utiliser torch.ones_like()
+- Utiliser torch.vstack()
+- Utiliser view() pour que la ligne de 1 ait la bonne forme
