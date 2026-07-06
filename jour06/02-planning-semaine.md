@@ -15,10 +15,10 @@
 
 # Jeudi
 
-- matin : cours distanciel ??? A confirmer
-- après midi : cours distanciel ??? A confirmer
+- matin : cours distanciel
+- après midi : cours distanciel
 
 # Vendredi
 
-- matin : cours distanciel ??? A confirmer
-- après midi  : cours distanciel ??? A confirmer
+- matin : cours distanciel
+- après midi  : cours distanciel
