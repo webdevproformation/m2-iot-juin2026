@@ -59,3 +59,31 @@ créer un tensor de dimension 3 de taille (1,2,4) contenant des chiffres entiers
 - afficher ses dimensions
 - afficher son contenu
 ```
+
+```txt
+Énoncé
+
+À l'aide de PyTorch :
+
+Crée un tenseur 3D de taille (2, 5, 10).
+Ce tenseur doit contenir exactement 50 zéros et 50 uns (soit 100 éléments au total).
+Mélange aléatoirement les valeurs afin que les 0 et les 1 ne soient pas regroupés.
+
+Vérifie :
+
+- la forme du tenseur ;
+- le nombre de zéros ;
+- le nombre de uns.
+```
+
+```py
+resultat = torch.cat([
+    torch.zeros(50),
+    torch.ones(50)
+])
+resultat = resultat[torch.randperm(resultat.size(0))]
+
+resultat = resultat.reshape((2,5,10))
+
+resultat
+```
