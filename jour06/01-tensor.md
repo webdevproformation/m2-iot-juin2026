@@ -128,3 +128,21 @@ data_masque[data == 1] = 9
 
 data_masque
 ```
+
+
+# options avancées de création de tensor
+
+```py
+A = torch.tensor( [1.,2.] , dtype=None , device=None, requires_grad=False)
+
+# donnée [1,2] => comme quand on  crée une variable 
+A.dtype # torch.int64
+# lorsque vous devez passer vers numpy => float32
+A.device # 'cpu'
+# requires_grad => option que l'on va activer / désactiver lorsque l'on va faire l'entrainement
+# de nos modéles (permet de faire en sorte que les optmisations des modèles soit plus rapide)
+```
+
+# faire des calculs sur des tensors
+
+
