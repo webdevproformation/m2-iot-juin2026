@@ -145,4 +145,5 @@ A.device # 'cpu'
 
 # faire des calculs sur des tensors
 
-
+```py
+```
