@@ -53,3 +53,24 @@ ligne2 = torch.hstack(( B, A ))
 resultat = torch.vstack(( ligne1 , ligne2 ))
 resultat
 ```
+
+
+## correction
+
+
+```py
+# correction 
+import torch
+A = torch.zeros(2,2)
+B = torch.ones(2,2)
+
+haut = torch.hstack((A,B))
+
+ligne_3_un = torch.ones_like(torch.zeros(4)).view(1,4)
+ligne_4_zero = torch.zeros_like(torch.ones(4)).view(1,4)
+haut , ligne_3_un, ligne_4_zero
+
+resultat = torch.vstack( ( haut , ligne_3_un , ligne_4_zero ) )
+
+resultat
+```
