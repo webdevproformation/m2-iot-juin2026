@@ -40,3 +40,16 @@ Z = torch.tensor([1,2,3] , device=device) # Torch not compiled with CUDA enabled
 print(Z.device)
 # Y , Z 
 ```
+
+# correction
+
+```py
+A = torch.zeros((2,2))
+B = torch.ones((2,2))
+
+ligne1 = torch.hstack((A,B))
+ligne2 = torch.hstack(( B, A ))
+
+resultat = torch.vstack(( ligne1 , ligne2 ))
+resultat
+```
