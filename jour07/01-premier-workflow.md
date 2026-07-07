@@ -36,3 +36,43 @@ plt.xlabel("X feature", fontsize="14")
 plt.ylabel("Y target", fontsize="14")
 ```
 
+# Model
+
+```py
+# 2 model
+from torch import nn 
+
+class ModelLinaire( nn.Module ):
+
+  def __init__(self):
+    super().__init__()
+
+    # modèle à 1 seul neurone
+    self.weight =  nn.Parameter(torch.randn(1, requires_grad=True , dtype=torch.float32))
+    self.bias = nn.Parameter(torch.randn(1, requires_grad=True , dtype=torch.float32))
+    # ... créer les paramètres
+
+  def forward(self , x):
+    return self.weight * x + self.bias
+```
+
+# les fonctions de loss / optimizer 
+
+```py
+# 3 fonction de loss / optimizer
+
+# En fonction du cas que vous devez chercher 
+loss_fn = nn.L1Loss() 
+# fonction qui va évaluer l'écart en les prédictions de notre model et 
+# les valeurs d'entrainement
+# idéal pour les problèmes de régression 
+# utiliser MAE : Erreur Absolue Moyenne 
+
+model_0 = ModelLinaire()
+
+optimizer = torch.optim.SGD(param=model_0.parameters(), lr=0.01)
+#  stochastic gradient descent 
+# param => qu'est ce que l'on veut modifier => les paramètres de notre model
+# lr = learning rate => l'augmentation / diminution dans l'avancée
+# de la descente de gradiant 
+```
