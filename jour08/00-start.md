@@ -80,3 +80,23 @@ class Linaire( nn.Module ):
     def forward(self , x):
         return self.suite_layers( x )
 ```
+
+
+```py
+class Linaire( nn.Module ):
+    
+    def __init__(self , in , out , hidden):
+        super().__init__()
+        self.suite_layers = nn.Sequential(
+            nn.Linear(in_features=in, out_features=hidden)
+            nn.Linear(in_features=hidden, out_features=hidden)
+            nn.Linear(in_features=hidden, out_features=hidden)
+            nn.Linear(in_features=hidden, out_features=out)
+        )
+
+    def forward(self , x):
+        return self.suite_layers( x )
+
+
+model_1 = Linaire( 2 , 1 , 10 )
+```
