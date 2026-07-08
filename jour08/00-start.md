@@ -104,3 +104,25 @@ model_1 = Linaire( 2 , 1 , 10 )
 # sur google colab 
 
 - remplacer le modèle que nous avons créé hier avec la nouvelle syntaxe que nous venons de voir ensemble
+
+
+
+```py
+# 2 model
+from torch import nn
+
+class ModelLinaire( nn.Module ):
+
+  def __init__(self):
+    super().__init__()
+
+    # modèle à 1 seul neurone
+    # self.weight =  nn.Parameter(torch.randn(1, requires_grad=True , dtype=torch.float32))
+    # self.bias = nn.Parameter(torch.randn(1, requires_grad=True , dtype=torch.float32))
+    # ... créer les paramètres
+    self.neurone = nn.Linear(in_features=1, out_features=1)
+
+  def forward(self , x):
+    # return self.weight * x + self.bias
+    return self.neurone(x)
+```
