@@ -100,3 +100,7 @@ class Linaire( nn.Module ):
 
 model_1 = Linaire( 2 , 1 , 10 )
 ```
+
+# sur google colab 
+
+- remplacer le modèle que nous avons créé hier avec la nouvelle syntaxe que nous venons de voir ensemble
