@@ -34,3 +34,18 @@ def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Ten
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
 ```
+
+# utiliser la fonction pour évaluer notre model
+
+```py
+import matplotlib.pyplot as plt 
+import numpy as np
+plt.figure(figsize=(12,8))
+
+plt.subplot(1,2,1)
+plot_decision_boundary(model_loaded , X_train , y_train)
+plt.title("train")
+plt.subplot(1,2,2)
+plot_decision_boundary(model_loaded , X_test , y_test)
+plt.title("test")
+```
