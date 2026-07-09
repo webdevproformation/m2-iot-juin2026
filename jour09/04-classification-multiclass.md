@@ -1,4 +1,51 @@
+# toujours le même process
+
+- donnée
+    - `sklearn => datasets`
+- model
+    - plusieurs Layer 
+    - nn.Linear()
+    - nn.Relu
+    - 
+- fonction de loss + optimiser
+    - (ici la différence)
+    - loss_fn = nn.CrossEntropyLoss()
+    - optimizer = torch.optim.SGD()
+
+- entrainement et des tests
+    - le model quand il est exécuté il ne donne pas une class
+    
+```
+y_logits = model(X_train)
+y_pred = torch.softmax(y_logits , dim=1  ).argmax(dim=1)
+```
+
+# dépendance du projet
+
 ```py
+# dépendances
+import torch
+from torch import nn
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import make_blobs
+from sklearn.model_selection import train_test_split
+
+def accuracy_fn(y_true, y_pred):
+    """Calculates accuracy between truth labels and predictions.
+
+    Args:
+        y_true (torch.Tensor): Truth labels for predictions.
+        y_pred (torch.Tensor): Predictions to be compared to predictions.
+
+    Returns:
+        [torch.float]: Accuracy value between y_true and y_pred, e.g. 78.45
+    """
+    correct = torch.eq(y_true, y_pred).sum().item()
+    acc = (correct / len(y_pred)) * 100
+    return acc
+
+
 def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Tensor):
     """Plots decision boundaries of model predicting on X in comparison to y.
 
@@ -33,21 +80,5 @@ def plot_decision_boundary(model: torch.nn.Module, X: torch.Tensor, y: torch.Ten
     plt.scatter(X[:, 0], X[:, 1], c=y, s=40, cmap=plt.cm.RdYlBu)
     plt.xlim(xx.min(), xx.max())
     plt.ylim(yy.min(), yy.max())
+
 ```
-
-# utiliser la fonction pour évaluer notre model
-
-```py
-import matplotlib.pyplot as plt 
-import numpy as np
-plt.figure(figsize=(12,8))
-
-plt.subplot(1,2,1)
-plot_decision_boundary(model_loaded , X_train , y_train)
-plt.title("train")
-plt.subplot(1,2,2)
-plot_decision_boundary(model_loaded , X_test , y_test)
-plt.title("test")
-```
-
-# rdv 15h40 bon café @ toute suite !!!!
