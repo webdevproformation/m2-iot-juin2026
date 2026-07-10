@@ -24,3 +24,6 @@ for j in range(K):
 plt.scatter(X[:, 0], X[:, 1], c=y, s=40, cmap=plt.cm.Spectral)
 plt.show()
 ```
+
+- rdv 13h55 pour la correction 
+- si vous avez réaliser le travail => envoyé via Discord pour que je puisse l'évaluer MERCI !
