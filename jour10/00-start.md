@@ -177,7 +177,7 @@ for epoch in range(epochs):
   loss = loss_fn(y_logits , y_train  )
   acc = accuracy_fn( y_true=y_train , y_pred=y_pred )
 
-  print(epoch , loss , acc)
+  
   # zero
   optimizer.zero_grad()
 
@@ -186,4 +186,21 @@ for epoch in range(epochs):
 
   # step
   optimizer.step()
+
+  # test 
+  model.eval()
+  with torch.inference_mode():
+    # forward_test
+    y_logits_test = model( X_test )
+    y_pred_test = torch.softmax(y_logits_test, dim=1).argmax( dim=1 )
+
+    # loss_test
+    loss_test = loss_fn(y_logits_test , y_test )
+    #  loss_test = loss_fn(y_logits_test , y_test.long() )
+    acc_test = accuracy_fn( y_true=y_test , y_pred=y_pred_test )
+
+  # afficher l'évolution des calculs pendant l'exécution de la boucle 
+  if epoch % 20 == 0 :
+    print(f"epoch {epoch} - loss {loss:.5f} - acc {acc:.2f}% - loss_test {loss_test:.5f} - acc_test {acc_test:.2f}%")
+
 ```
