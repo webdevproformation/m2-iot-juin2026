@@ -204,3 +204,34 @@ for epoch in range(epochs):
     print(f"epoch {epoch} - loss {loss:.5f} - acc {acc:.2f}% - loss_test {loss_test:.5f} - acc_test {acc_test:.2f}%")
 
 ```
+
+# Visualiser le modele entrainé en action
+
+```py
+# Visualiser notre modèle
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(12,8))
+plt.subplot(1,2,1)
+plot_decision_boundary( model , X_train , y_train )
+plt.title("train")
+
+plt.subplot(1,2,2)
+plot_decision_boundary( model , X_test , y_test )
+plt.title("test")
+```
+
+# la librairie torchmetrics
+
+```py
+# test la fonction Accuracy de la librairie <https://lightning.ai/docs/torchmetrics/stable/classification/accuracy.html>
+
+from torchmetrics import Accuracy
+
+acc_torchmetrics = Accuracy( task="multiclass", num_classes=4 ).to(device)
+
+acc_torchmetrics( model(X_test) , y_test ) 
+# tensor(0.9950)
+```
+
+ 
